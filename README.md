@@ -31,7 +31,7 @@ This is a Node.js API for managing employees. It provides CRUD (Create, Read, Up
    npm start
    ```
 
-   The API server will start running on `http://localhost:3000`.
+   The API server will start running on `http://localhost:5000`.
 
 ## API Endpoints
 
