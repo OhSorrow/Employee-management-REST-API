@@ -5,7 +5,7 @@ export const createEmployee = async (req, res) => {
   const newEmployee = req.body;
   try {
     const employeesCollection = client.db("database").collection("employees");
-    const result = await employeesCollection.insertOne(newEmployee);
+    await employeesCollection.insertOne(newEmployee);
     res.send(
       `Employee added successfully. Employee name: ${newEmployee.firstName} ${newEmployee.lastName}`
     );
