@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import employeesRoutes from "./routes/employees.js";
 import { connectToDatabase } from "./db.js";
 import { config } from "dotenv";
+import cors from "cors";
 
 config();
 
@@ -12,6 +13,8 @@ const PORT = process.env.PORT || 5000;
 connectToDatabase().catch(console.error);
 
 app.use(bodyParser.json());
+
+app.use(cors());
 
 app.use("/employees", employeesRoutes);
 
